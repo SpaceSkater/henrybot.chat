@@ -1,0 +1,6 @@
+client/node_modules
+client/*.local
+
+server/node_modules
+server/logs
+server/.env
