@@ -1,5 +1,5 @@
 # <center>HenryBot.CHAT<center>
-
+![image](https://github.com/SpaceSkater/henrybot.chat/blob/main/readme_assets/HenryBot-IMG.jpg)
 **HenryBot.CHAT** 是一款基于 GPT LLM API 的问答机器人实验性开源前端项目。快来利用 Node.js 和 React，搭建属于你自己的极简、直连和个性化定制的 Chat GPT 吧！
 
 # 描述
