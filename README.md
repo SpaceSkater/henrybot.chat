@@ -1,17 +1,24 @@
-# <center>HenryBot.CHAT<center>
+# HenryBot.CHAT
 ![image](https://github.com/SpaceSkater/henrybot.chat/blob/main/readme_assets/HenryBot-IMG.jpg)
+
 **HenryBot.CHAT** 是一款基于 GPT LLM API 的问答机器人实验性开源前端项目。快来利用 Node.js 和 React，搭建属于你自己的极简、直连和个性化定制的 Chat GPT 吧！
+
+# 在线访问
+HenryBot.CHAT官网：[www.henrybot.chat](https://www.henrybot.chat) 
+演示DEMO： [chat.henrybot.chat](https://chat.henrybot.chat)
 
 # 描述
 
 - **HenryBot.CHAT** 通过请求 GPT 的 API 接口，并验证 Key，从而实现流式输出的问答。
 - **HenryBot.CHAT** 适合个人部署以及练习，适合初学者以及有意愿开发基于 API 接口的问答机器人的开发者。
 
-# API 供应商
+![image](https://github.com/SpaceSkater/henrybot.chat/blob/main/readme_assets/HenryBot-demo.gif)
+
+# API 供应商 ⭐ 重要
 
 - 在所有自建 GPT 中，最重要的就是权鉴对话的**Key**了
-- 关于 **Key** 的获得，首要渠道是 **OpenAI** 账号的 **API KEY**，具体参考[**OpenAI**官方文档](https://platform.openai.com/docs/api-reference/introduction)
-- 除了使用 **OpenAI** 的官方 API 以外，推荐使用**API2D**的代理 API 服务，具体详情可以了解[API2D 官方网站](https://api2d.com/r/198039)
+- 关于 **Key** 的获得，首要渠道是 **OpenAI** 账号的 **API KEY**，具体参考 [**OpenAI**官方文档](https://platform.openai.com/docs/api-reference/introduction)
+- 除了使用 **OpenAI** 的官方 API 以外，推荐使用 **API2D** 的代理 API 服务，具体详情可以了解 [API2D 官方网站](https://api2d.com/r/198039)
 - 以下示例中环境变量参考的是 **API2D** 的 API，请根据自己的情况考虑是否修改。
 
 # 启动
@@ -43,7 +50,7 @@
 
 **Server：** server 文件夹包含 Node.js + Express 构建的微服务部分，负责处理**Client**和**GPT API**的 IO 信息。
 
-> 推荐使用 **Docker** 将 Server 部署到个人 VPS 云服务器上。以下为部署到 VPS 的步骤。
+> 推荐使用 **Docker** 将 Server 部署到个人云服务器上。以下为部署到云服务器的步骤。
 
 1. 克隆仓库到本地
 2. 将 **server** 文件夹保存到云服务器中（请自定义位置）
