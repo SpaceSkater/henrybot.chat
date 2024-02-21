@@ -1,11 +1,13 @@
 # HenryBot.CHAT
+
 ![image](https://github.com/SpaceSkater/henrybot.chat/blob/main/readme_assets/HenryBot-IMG.jpg)
 
 **HenryBot.CHAT** 是一款基于 GPT LLM API 的问答机器人实验性开源前端项目。快来利用 Node.js 和 React，搭建属于你自己的极简、直连和个性化定制的 Chat GPT 吧！
 
 # 在线访问
-HenryBot.CHAT官网：[www.henrybot.chat](https://www.henrybot.chat) 
-演示DEMO： [chat.henrybot.chat](https://chat.henrybot.chat)
+
+HenryBot.CHAT 官网：[www.henrybot.chat](https://www.henrybot.chat)
+演示 DEMO： [chat.henrybot.chat](https://chat.henrybot.chat)
 
 # 描述
 
@@ -28,13 +30,21 @@ HenryBot.CHAT官网：[www.henrybot.chat](https://www.henrybot.chat)
 1. 克隆仓库到本地
 2. 你会得到两个主要的文件夹 **server** 和 **client**，和其他一些暂时不需要管的文件，在分别打开 **server** 和 **client**。在终端下，分别执行 `npm install` 以安装其依赖。
 3. 在 **server** 目录下添加 `.env` 文件， 并填入：
-   `CHATAPI_URL=https://openai.api2d.net/v1/chat/completions`
-   `GETBALANCE_URL=https://oa.api2d.net/dashboard/billing/credit_grants`
-   `PORT=4000`
+
+```
+ CHATAPI_URL=https://openai.api2d.net/v1/chat/completions
+ GETBALANCE_URL=https://oa.api2d.net/dashboard/billing/credit_grants
+ PORT=4000
+```
+
 4. 在 **client** 目录下添加 `.env.local` 文件， 并填入
-   `VITE_VERCEL_ASK : localhost:4000/api/v1/ask`
-   `VITE_VERCEL_IS_WORK : localhost:4000/api/v1/iswork`
-   `VITE_VERCEL_GET_BALANCE : localhost:4000/api/v1/balance`
+
+```
+ VITE_VERCEL_ASK : localhost:4000/api/v1/ask
+ VITE_VERCEL_IS_WORK : localhost:4000/api/v1/iswork
+ VITE_VERCEL_GET_BALANCE : localhost:4000/api/v1/balance
+```
+
 5. 分别在 **server**目录终端中，输入 `npm start`, 在**client**终端中，输入 `npm run dev`, 即可分别启动 **server** 和 **client**，就可以开始使用和开发**HenryBot**了！
 
 # 部署
@@ -56,9 +66,13 @@ HenryBot.CHAT官网：[www.henrybot.chat](https://www.henrybot.chat)
 2. 将 **server** 文件夹保存到云服务器中（请自定义位置）
 3. 在 **server** 文件夹中添加 `.env`文件
 4. 在 `.env` 文件中填入：
-   `CHATAPI_URL=https://openai.api2d.net/v1/chat/completions`
-   `GETBALANCE_URL=https://oa.api2d.net/dashboard/billing/credit_grants`
-   `PORT=4000`
+
+```
+CHATAPI_URL=https://openai.api2d.net/v1/chat/completions
+GETBALANCE_URL=https://oa.api2d.net/dashboard/billing/credit_grants
+PORT=4000
+```
+
 5. 在云服务器中安装**Docker**，具体安装参考[Docker 官方安装教程](https://docs.docker.com/engine/install/)
 6. 在自定义的 server 目录下执行 **Docker** 命令：
    `docker build -t henrybot.`
@@ -74,7 +88,11 @@ HenryBot.CHAT官网：[www.henrybot.chat](https://www.henrybot.chat)
 2. 可以按照需求自定义修改代码（也可以直接使用）
 3. 将 **client 部分** 部署到 **Vercel**，具体部署参考[Vercel 官方部署教程](https://vercel.com/docs/getting-started-with-vercel)
 4. 部署成功后添加以下环境变量到 **Vercel**
-   `VITE_VERCEL_ASK : <云服务器IP和端口> 或 <域名> + /api/v1/ask`
-   `VITE_VERCEL_IS_WORK : <云服务器IP和端口> 或 <域名> + /api/v1/iswork`
-   `VITE_VERCEL_GET_BALANCE : <云服务器IP和端口> 或 <域名> + /api/v1/balance`
+
+```
+ VITE_VERCEL_ASK : <云服务器IP和端口> 或 <域名> + /api/v1/ask
+ VITE_VERCEL_IS_WORK : <云服务器IP和端口> 或 <域名> + /api/v1/iswork
+ VITE_VERCEL_GET_BALANCE : <云服务器IP和端口> 或 <域名> + /api/v1/balance
+```
+
 5. 访问属于自己的 **HenryBot.CHAT** ！
