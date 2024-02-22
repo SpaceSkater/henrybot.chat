@@ -49,9 +49,8 @@ function DialogWindow() {
                 </div>
               </div>
 
-              <div className="rounded-md bg-zinc-200 p-2 dark:bg-zinc-600 sm:max-w-[511px]">
-                {/* {chat.content} */}
-                <div className="max-w-[260px] sm:max-w-[511px]">
+              <div className="max-w-[260px] rounded-md bg-zinc-200 p-2 dark:bg-zinc-600 sm:max-w-[511px]">
+                <div>
                   <DialogMarkdown textContent={chat.content} darkMode={true} />
                 </div>
               </div>

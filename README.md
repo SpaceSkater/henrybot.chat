@@ -32,17 +32,17 @@ HenryBot.CHAT 官网：[www.henrybot.chat](https://www.henrybot.chat)
 3. 在 **server** 目录下添加 `.env` 文件， 并填入：
 
 ```
- CHATAPI_URL=https://openai.api2d.net/v1/chat/completions
- GETBALANCE_URL=https://oa.api2d.net/dashboard/billing/credit_grants
- PORT=4000
+CHATAPI_URL=https://openai.api2d.net/v1/chat/completions
+GETBALANCE_URL=https://oa.api2d.net/dashboard/billing/credit_grants
+PORT=4000
 ```
 
 4. 在 **client** 目录下添加 `.env.local` 文件， 并填入
 
 ```
- VITE_VERCEL_ASK : localhost:4000/api/v1/ask
- VITE_VERCEL_IS_WORK : localhost:4000/api/v1/iswork
- VITE_VERCEL_GET_BALANCE : localhost:4000/api/v1/balance
+VITE_VERCEL_ASK : localhost:4000/api/v1/ask
+VITE_VERCEL_IS_WORK : localhost:4000/api/v1/iswork
+VITE_VERCEL_GET_BALANCE : localhost:4000/api/v1/balance
 ```
 
 5. 分别在 **server**目录终端中，输入 `npm start`, 在**client**终端中，输入 `npm run dev`, 即可分别启动 **server** 和 **client**，就可以开始使用和开发**HenryBot**了！
@@ -90,9 +90,9 @@ PORT=4000
 4. 部署成功后添加以下环境变量到 **Vercel**
 
 ```
- VITE_VERCEL_ASK : <云服务器IP和端口> 或 <域名> + /api/v1/ask
- VITE_VERCEL_IS_WORK : <云服务器IP和端口> 或 <域名> + /api/v1/iswork
- VITE_VERCEL_GET_BALANCE : <云服务器IP和端口> 或 <域名> + /api/v1/balance
+VITE_VERCEL_ASK : <云服务器IP和端口> 或 <域名> + /api/v1/ask
+VITE_VERCEL_IS_WORK : <云服务器IP和端口> 或 <域名> + /api/v1/iswork
+VITE_VERCEL_GET_BALANCE : <云服务器IP和端口> 或 <域名> + /api/v1/balance
 ```
 
 5. 访问属于自己的 **HenryBot.CHAT** ！
