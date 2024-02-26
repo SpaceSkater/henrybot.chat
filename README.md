@@ -40,9 +40,9 @@ PORT=4000
 4. 在 **client** 目录下添加 `.env.local` 文件， 并填入
 
 ```
-VITE_VERCEL_ASK : localhost:4000/api/v1/ask
-VITE_VERCEL_IS_WORK : localhost:4000/api/v1/iswork
-VITE_VERCEL_GET_BALANCE : localhost:4000/api/v1/balance
+VITE_VERCEL_ASK=localhost:4000/api/v1/ask
+VITE_VERCEL_IS_WORK=localhost:4000/api/v1/iswork
+VITE_VERCEL_GET_BALANCE=localhost:4000/api/v1/balance
 ```
 
 5. 分别在 **server**目录终端中，输入 `npm start`, 在**client**终端中，输入 `npm run dev`, 即可分别启动 **server** 和 **client**，就可以开始使用和开发**HenryBot**了！
