@@ -34,8 +34,8 @@ function App() {
 
         <IsDarkModeButton />
 
-        <div className="flex justify-center p-4">
-          <div className="grid w-[360px] grid-rows-[auto_1fr_auto] gap-2 rounded-lg bg-zinc-300 p-2 shadow-xl dark:bg-zinc-700 dark:text-zinc-200 sm:w-[640px]">
+        <div className="flex h-screen justify-center p-4">
+          <div className="grid w-[360px] grid-rows-[auto_1fr_auto] gap-2 rounded-xl bg-zinc-300 p-2 shadow-xl dark:bg-zinc-700 dark:text-zinc-200 sm:w-[640px]">
             <ToImageProvider>
               <ChatHeader />
               <DialogWindow />

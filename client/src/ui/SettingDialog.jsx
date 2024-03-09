@@ -1,7 +1,7 @@
 import * as Dialog from "@radix-ui/react-dialog";
 import { AnimatePresence, motion } from "framer-motion";
 import { useState } from "react";
-import { TbX } from "react-icons/tb";
+import { TbLoader, TbX } from "react-icons/tb";
 import { useMessages } from "../context/MessagesContext";
 import { useForm } from "react-hook-form";
 import { useBalance } from "../hook/useBalance";
@@ -56,6 +56,7 @@ function SettingDialog({ children }) {
                         className="rounded-md bg-zinc-300 p-2 focus:outline-none focus:ring focus:ring-zinc-400 dark:bg-zinc-700"
                       >
                         <option value="">GPT-3.5</option>
+                        <option value="">GPT-4.0 ( comming soon )</option>
                       </select>
                     </div>
 
@@ -64,7 +65,7 @@ function SettingDialog({ children }) {
                         Chat-Key
                       </label>
                       <input
-                        type="text"
+                        type="password"
                         className="rounded-md bg-zinc-300 p-2 focus:outline-none focus:ring focus:ring-zinc-400 dark:bg-zinc-700"
                         defaultValue={chatKey}
                         {...register("chatKey")}
@@ -83,10 +84,14 @@ function SettingDialog({ children }) {
                           disabled={true}
                         />
                         <button
-                          className="min-w-[80px] rounded-md bg-green-300 py-1 font-semibold text-green-700 hover:bg-green-400 focus:outline-none focus:ring focus:ring-zinc-400 sm:px-4 sm:text-base"
+                          className="flex w-16 items-center justify-center  rounded-md bg-green-300 py-1 font-semibold text-green-700 hover:bg-green-400 focus:outline-none focus:ring focus:ring-zinc-400 sm:px-4 sm:text-base"
                           onClick={clickFetch}
                         >
-                          {isFetching ? "Getting..." : "Query"}
+                          {isFetching ? (
+                            <TbLoader size="1.5rem" className="animate-spin" />
+                          ) : (
+                            "Query"
+                          )}
                         </button>
                       </div>
                     </div>

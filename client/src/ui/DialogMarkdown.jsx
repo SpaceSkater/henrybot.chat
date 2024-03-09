@@ -26,7 +26,7 @@ function DialogMarkdown({ textContent, darkMode }) {
               style={them[darkMode ? "dark" : "light"]}
               language={match[1]}
               PreTag="div"
-              className="rounded-md"
+              className="rounded-lg"
               {...props}
             >
               {

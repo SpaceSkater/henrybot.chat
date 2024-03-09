@@ -27,7 +27,7 @@ function DialogWindow() {
   return (
     <div
       ref={scrollRef}
-      className="h-[640px] overflow-y-scroll rounded-lg bg-zinc-50 dark:bg-zinc-900 sm:h-[560px]"
+      className="h-full overflow-y-scroll rounded-lg bg-zinc-50 dark:bg-zinc-900"
     >
       <div
         className="bg-zinc-50 py-2 shadow-inner dark:bg-zinc-900"
@@ -49,10 +49,8 @@ function DialogWindow() {
                 </div>
               </div>
 
-              <div className="max-w-[260px] rounded-md bg-zinc-200 p-2 dark:bg-zinc-600 sm:max-w-[511px]">
-                <div>
-                  <DialogMarkdown textContent={chat.content} darkMode={true} />
-                </div>
+              <div className="max-w-[261px] rounded-lg bg-zinc-200 p-2 dark:bg-zinc-600 sm:max-w-[510px]">
+                <DialogMarkdown textContent={chat.content} darkMode={true} />
               </div>
             </div>
           </div>
