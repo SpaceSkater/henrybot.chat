@@ -5,7 +5,8 @@ import toast from "react-hot-toast";
 import { TbSend } from "react-icons/tb";
 
 function InputBar() {
-  const { chatKey, messages, setMessages, setIsTyping } = useMessages();
+  const { chatKey, chatModel, messages, setMessages, setIsTyping } =
+    useMessages();
   const {
     register,
     handleSubmit,
@@ -26,7 +27,14 @@ function InputBar() {
     setMessages((preMessages) => [...preMessages, ...newAsk]);
 
     // 执行fetchStream函数 获取流式回复
-    fetchStream(newAsk, messages, setMessages, setIsTyping, chatKey);
+    fetchStream({
+      newAsk,
+      messages,
+      setMessages,
+      setIsTyping,
+      chatKey,
+      chatModel,
+    });
 
     reset(); // 重置表单
   }

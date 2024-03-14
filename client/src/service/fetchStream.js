@@ -1,15 +1,16 @@
 import { fetchEventSource } from "@microsoft/fetch-event-source";
 import toast from "react-hot-toast";
 
-export async function fetchStream(
+export async function fetchStream({
   newAsk,
   messages,
   setMessages,
   setIsTyping,
   chatKey,
-) {
+  chatModel,
+}) {
   let answer = ""; // 用于拼接每次传输来的一个字或词
-  setIsTyping(true); 
+  setIsTyping(true);
   const abortController = new AbortController();
 
   const eventSource = await fetchEventSource(import.meta.env.VITE_VERCEL_ASK, {
@@ -18,6 +19,7 @@ export async function fetchStream(
     headers: {
       "Content-Type": "application/json",
       Authorization: chatKey,
+      Model: chatModel,
     },
     signal: abortController.signal,
 
@@ -26,7 +28,7 @@ export async function fetchStream(
       if (e.data === "[DONE]") {
         abortController.abort(); // 关闭请求
         // console.log("输出结束");
-        setIsTyping(false); 
+        setIsTyping(false);
         eventSource.close(); // 关闭 EventSource
       }
 

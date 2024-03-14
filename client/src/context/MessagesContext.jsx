@@ -4,6 +4,9 @@ const messagesContext = createContext();
 
 function MessagesProvider({ children }) {
   const [chatKey, setChatKey] = useState(localStorage.getItem("chatKey"));
+  const [chatModel, setChatModel] = useState(
+    localStorage.getItem("chatModel") || "gpt-3.5-turbo",
+  );
   const [isTyping, setIsTyping] = useState(false);
   const [messages, setMessages] = useState([
     {
@@ -17,6 +20,8 @@ function MessagesProvider({ children }) {
       value={{
         chatKey,
         setChatKey,
+        chatModel,
+        setChatModel,
         messages,
         setMessages,
         isTyping,

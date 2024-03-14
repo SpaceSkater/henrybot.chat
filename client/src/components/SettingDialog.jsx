@@ -10,13 +10,15 @@ import toast from "react-hot-toast";
 function SettingDialog({ children }) {
   const [isSettingShow, setIsSettingShow] = useState(false);
 
-  const { chatKey, setChatKey } = useMessages();
+  const { chatKey, setChatKey, chatModel, setChatModel } = useMessages();
   const { balance, isFetching, clickFetch } = useBalance();
   const { register, handleSubmit } = useForm();
 
   function onSubmit(data) {
     setChatKey(data.chatKey);
+    setChatModel(data.chatModel);
     localStorage.setItem("chatKey", data.chatKey);
+    localStorage.setItem("chatModel", data.chatModel);
     toast.success("Saved successfully : )");
   }
 
@@ -51,12 +53,12 @@ function SettingDialog({ children }) {
                         Model selection
                       </label>
                       <select
-                        name=""
-                        id=""
                         className="rounded-md bg-zinc-300 p-2 focus:outline-none focus:ring focus:ring-zinc-400 dark:bg-zinc-700"
+                        defaultValue={chatModel}
+                        {...register("chatModel")}
                       >
-                        <option value="">GPT-3.5</option>
-                        <option value="">GPT-4.0 ( comming soon )</option>
+                        <option value="gpt-3.5-turbo">GPT-3.5</option>
+                        <option value="gpt-4-0613">GPT-4.0</option>
                       </select>
                     </div>
 

@@ -3,7 +3,7 @@ import { logger } from "../app.js";
 
 export async function ask(req, res) {
   const chats = req.body;
-  const { authorization: CHAT_KEY } = req.headers;
+  const { authorization: CHAT_KEY, model: chatModel } = req.headers;
 
   // console.log(Object.keys(chats).length);  // 验证body是否是空对象
 
@@ -19,7 +19,7 @@ export async function ask(req, res) {
     const { data } = await axios.post(
       process.env.CHATAPI_URL,
       {
-        model: "gpt-3.5-turbo",
+        model: chatModel,
         messages: chats,
         stream: true,
       },

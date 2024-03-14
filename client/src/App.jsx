@@ -4,11 +4,11 @@ import { ToImageProvider } from "./context/ToImageContext";
 import { Analytics } from "@vercel/analytics/react";
 import { Toaster } from "react-hot-toast";
 
-import ChatHeader from "./ui/ChatHeader";
-import DialogWindow from "./ui/DialogWindow";
-import InputBar from "./ui/InputBar";
-import Footer from "./ui/Footer";
-import IsDarkModeButton from "./ui/IsDarkModeButton";
+import ChatHeader from "./components/ChatHeader";
+import DialogWindow from "./components/DialogWindow";
+import InputBar from "./components/InputBar";
+import Footer from "./components/Footer";
+import IsDarkModeButton from "./components/IsDarkModeButton";
 
 function App() {
   return (
